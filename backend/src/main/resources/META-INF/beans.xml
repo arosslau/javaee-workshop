@@ -5,5 +5,6 @@
 	bean-discovery-mode="all">
 	<alternatives>
 	<!-- <class>de.gedoplan.workshop.persistence.impl.TalkMockRepository</class> -->
+	<!-- <class>de.gedoplan.workshop.persistence.impl.PersonMockRepository</class> -->
 	</alternatives>
 </beans>
