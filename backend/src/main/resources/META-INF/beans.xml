@@ -6,5 +6,6 @@
 	<alternatives>
 	<!-- <class>de.gedoplan.workshop.persistence.impl.TalkMockRepository</class> -->
 	<!-- <class>de.gedoplan.workshop.persistence.impl.PersonMockRepository</class> -->
+	<class>de.gedoplan.workshop.persistence.impl.ExtendedEntityManagerProducer</class>
 	</alternatives>
 </beans>

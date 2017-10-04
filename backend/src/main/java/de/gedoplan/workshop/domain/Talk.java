@@ -12,7 +12,6 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
-import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
@@ -39,7 +38,7 @@ public class Talk extends GeneratedIntegerIdEntity {
 
   private int minutes;
 
-  @ManyToMany(fetch = FetchType.EAGER)
+  @ManyToMany
   @JoinTable(name = "TALK_SPEAKER", joinColumns = @JoinColumn(name = "TALK_ID"), inverseJoinColumns = @JoinColumn(name = "PERSON_ID"))
   private Set<Person> speakers;
 
