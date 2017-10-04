@@ -3,6 +3,8 @@ package de.gedoplan.workshop.domain;
 import de.gedoplan.baselibs.persistence.entity.GeneratedIntegerIdEntity;
 
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
 import javax.persistence.Access;
 import javax.persistence.AccessType;
@@ -10,6 +12,10 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -33,11 +39,17 @@ public class Talk extends GeneratedIntegerIdEntity {
 
   private int minutes;
 
+  @ManyToMany(fetch = FetchType.EAGER)
+  @JoinTable(name = "TALK_SPEAKER", joinColumns = @JoinColumn(name = "TALK_ID"), inverseJoinColumns = @JoinColumn(name = "PERSON_ID"))
+  private Set<Person> speakers;
+
   public Talk(String title, TalkType type, Date start, int minutes) {
     this.title = title;
     this.type = type;
     this.start = start;
     this.minutes = minutes;
+
+    this.speakers = new HashSet<>();
   }
 
   protected Talk() {
