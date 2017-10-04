@@ -57,8 +57,8 @@ public class TalkMockRepository implements TalkRepository {
   }
 
   @Override
-  public void remove(Talk talk) {
-    this.mockTable.remove(talk.getId());
+  public boolean remove(Talk talk) {
+    return this.mockTable.remove(talk.getId()) != null;
   }
 
   @Override

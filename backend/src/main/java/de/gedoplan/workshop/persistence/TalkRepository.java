@@ -9,7 +9,7 @@ public interface TalkRepository {
 
   Talk merge(Talk talk);
 
-  void remove(Talk talk);
+  boolean remove(Talk talk);
 
   Talk findById(Integer id);
 

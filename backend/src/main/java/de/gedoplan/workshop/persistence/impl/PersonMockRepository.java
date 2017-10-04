@@ -46,9 +46,8 @@ public class PersonMockRepository implements PersonRepository {
   }
 
   @Override
-  public void remove(Person person) {
-    this.store.remove(person.getId());
-
+  public boolean remove(Person person) {
+    return this.store.remove(person.getId()) != null;
   }
 
   @Produces

@@ -1,5 +1,7 @@
 package de.gedoplan.workshop.domain;
 
+import de.gedoplan.baselibs.persistence.entity.GeneratedIntegerIdEntity;
+
 import java.util.Date;
 
 import javax.persistence.Access;
@@ -8,9 +10,6 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -21,10 +20,7 @@ import lombok.Setter;
 @Access(AccessType.FIELD)
 @Getter
 @Setter
-public class Talk {
-  @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Integer id;
+public class Talk extends GeneratedIntegerIdEntity {
 
   private String title;
 
