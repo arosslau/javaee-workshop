@@ -1,0 +1,22 @@
+.navbar-brand img{
+  height: 25px;
+}
+
+.content{
+  padding-top: 60px;
+}
+
+@media only screen and (min-width : 992px) {
+      .navbar-brand img{
+        height: 50px;
+      }
+
+      .navbar{
+        min-height: 80px;
+      }
+
+      .content{
+        padding-top: 100px;
+      }
+
+}

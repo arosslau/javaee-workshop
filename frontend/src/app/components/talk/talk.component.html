@@ -1,0 +1,35 @@
+<div class="container">
+  <h2>Talks</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <td colspan="4">
+          <div class="options">
+            <a routerLink="edit">
+                <i class="fa fa-file-o" aria-hidden="true"></i>   new
+            </a>
+          </div>
+        </td>
+      </tr>
+    </thead>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Start</th>
+        <th>Type</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let talk of (talks | async)">
+        <td>{{talk.title}}</td>
+        <td>{{talk.start | date:'dd.MM.yyyy HH:mm'}}</td>
+        <td>{{talk.type}}</td>
+        <td>
+          <a (click)="delete(talk.id)"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+          <a [routerLink]="['edit',talk.id]"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,10 @@
+td .options{
+  float:right;
+}
+
+.fa{
+  font-size: 1.5em;
+  padding: 5px;
+  float:right;
+  cursor: pointer;
+}

@@ -1,0 +1,9 @@
+{
+  "/javaee-workshop-backend/rest/*": {
+    "target":"http://localhost:8080/javaee-workshop-backend/rest",
+    "secure": false,
+    "pathRewrite": {"^/javaee-workshop-backend/rest" : ""},
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}
