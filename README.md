@@ -11,7 +11,7 @@ Zum Mitmachen benötigen Sie die folgenden Dinge:
 
 - Einen Git-Client, z. B. Git Bash (Download: http://git-scm.com/downloads). Prüfen Sie bitte vor dem Workshop, dass Sie dieses Repository "clonen" können (git clone https://github.com/GEDOPLAN/javaee-workshop.git; cd javaee-workshop; git checkout wjax2017).
 
-- Maven 3.x (Download: http://maven.apache.org/download.html). Maven sollte von der Kommandozeile aus aufrufbar sein, damit wir Probleme beim Build der Software unabhängig von den restlichen Tools - insb. der IDE - bearbeiten können.
+- Maven 3.x (Download: http://maven.apache.org/download.html). Maven sollte von der Kommandozeile aus aufrufbar sein, damit wir Probleme beim Build der Software unabhängig von den restlichen Tools - insb. der IDE - bearbeiten können. Wir benötigen keine besondere Konfiguration von Maven. Ein Aufruf von mvn im Projektverzeichnis backend muss ohne Fehler durchlaufen. Sollte das nicht der Fall sein, prüfen Sie bitte, ob Sie eine spezielle Proxy- oder Mirror-Einstellung in Ihrer Konfigurationsdatei settings.xml eingetragen haben und deaktivieren Sie diese für den Workshop.
 
 - Eine IDE ihrer Wahl. Wichtig ist, dass Maven-Projekte importiert werden können und WildFly als Application Server eingebunden werden kann. Ich empfehle
   dazu das JBoss Developer Studio - kurz JBDS - (http://www.jboss.org/products/devstudio/download/, es reicht der sog. Stand-alone Installer). Anders als
@@ -51,6 +51,8 @@ Zum Mitmachen benötigen Sie die folgenden Dinge:
   -Xmx1024m
   ...
   ```
+
+- Ein Datenbank-Tool. Wir werden im Workshop die H2-Datenbank einsetzen. Der Treiber dazu befindet sich im Projektverzeichnis backend/additional/db. Als Connect-URL werden wir "jdbc:h2:~/h2/conference;AUTO_SERVER=TRUE" verwenden, User und Passwort sind jeweils "conference". Um bei Bedarf in die DB hinein schauen zu können, ist eines der gängigen DB-Werkzeuge nutzbar (SquirrelSQL, DBVisualiser etc.). Wir haben gute Erfahrungen mit SQLWorkbench/J gemacht (Download http://www.sql-workbench.net/). Der H2-Treiber selbst enthält ebenfalls ein Nutzerinterface.
 
 - Node.js (Download https://nodejs.org/en/). Wir werden in diesem Workshop ein Angular-Frontend einsetzen. Der Fokus des Workshops liegt aber nicht auf dem JavaScript-Frontend, sondern auf dem Java-EE-Backend. Die Frontend-Anwendung ist daher schon fertig gestellt und im Projekt bereits eingecheckt. Node und npm werden nur dann benötigt, wenn Sie den Frontend-Teil im Workshop manipulieren und neu bauen möchten.
 
