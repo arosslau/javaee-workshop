@@ -9,7 +9,7 @@ Zum Mitmachen benötigen Sie die folgenden Dinge:
 
 - Ein installiertes JDK. Wir benötigen Java 8 (Download für Windows und Linux: http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 
-- Einen Git-Client, z. B. Git Bash (Download: http://git-scm.com/downloads). Prüfen Sie bitte vor dem Workshop, dass Sie dieses Repository "clonen" können (git clone ).
+- Einen Git-Client, z. B. Git Bash (Download: http://git-scm.com/downloads). Prüfen Sie bitte vor dem Workshop, dass Sie dieses Repository "clonen" können (git clone https://github.com/GEDOPLAN/javaee-workshop.git; cd javaee-workshop; git checkout wjax2017).
 
 - Maven 3.x (Download: http://maven.apache.org/download.html). Maven sollte von der Kommandozeile aus aufrufbar sein, damit wir Probleme beim Build der Software unabhängig von den restlichen Tools - insb. der IDE - bearbeiten können.
 
