@@ -1,7 +1,7 @@
 Java EE 7 - Workshop
 ========================
 
-Dies ist das Begleitprojekt zum Workshop Java EE 7.
+Dies ist das Begleitprojekt zum "Java-EE-7/8-Workshop – Enterprise-Anwendungen ohne Ballast" am 6.11.2017 im Rahmen der W-JAX 2017 in München.
 
 Zum Mitmachen benötigen Sie die folgenden Dinge:
 
@@ -13,7 +13,7 @@ Zum Mitmachen benötigen Sie die folgenden Dinge:
 
 - Maven 3.x (Download: http://maven.apache.org/download.html)
 
-- Eine IDE ihrer Wahl. Wichtig ist, dass Maven-Projekte importiert werden können   und WildFly als Application Server eingebunden werden kann. Ich empfehle
+- Eine IDE ihrer Wahl. Wichtig ist, dass Maven-Projekte importiert werden können und WildFly als Application Server eingebunden werden kann. Ich empfehle
   dazu das JBoss Developer Studio - kurz JBDS - (http://www.jboss.org/products/devstudio/download/, es reicht der sog. Stand-alone Installer). Anders als
   der Name es vermuten lässt, ist es nicht nur für den JBoss Application Server nutzbar. Lassen Sie sich durch den Text auf der Download-Seite nicht verwirren:
   Die Software ist kostenlos. Sie müssen sich lediglich registrieren.
