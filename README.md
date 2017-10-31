@@ -40,7 +40,7 @@ Zum Mitmachen benötigen Sie die folgenden Dinge:
 
 - Wir werden im Wokshop Lombok einsetzen, um Schreibarbeit für niedere Dinge (Getter etc.) einzusparen. Für Maven-Projekte und IDEs, die damit direkt arbeiten
   (z. B. Netbeans) ist dazu keine Vorarbeit nötig. Für Eclipse und damit auch für das JBDS muss Lombok als Java Agent eingetragen werden. Kopieren Sie dazu
-  bitte die Datei lombok-1.16.12.jar aus dem Projektverzeichnis additional in das Verzeichnis studio Ihrer JBDS-Installation. In der Datei devstudio.ini
+  bitte die Datei lombok-1.16.12.jar aus dem Projektverzeichnis backend/additional/ide in das Verzeichnis studio Ihrer JBDS-Installation. In der Datei devstudio.ini
   im gleichen Verzeichnis finden Sie am Ende einige Start-Parameter für die JVM, eingeleitet durch -vmargs. Ergänzen Sie dort (nach der Zeile -vmargs) die 
   Zeile -javaagent:lombok-1.16.12.jar. Der gesamte Abschnitt der Ini-Datei sieht dann etwa so aus:
   
