@@ -1,0 +1,3 @@
+  private static Date createDateOf(int year, int month, int dayOfMonth, int hour, int minute) {
+    return Date.from(ZonedDateTime.of(year, month, dayOfMonth, hour, minute, 0, 0, ZoneId.of("Europe/Berlin")).toInstant());
+  }

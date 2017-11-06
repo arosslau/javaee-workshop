@@ -1,0 +1,3 @@
+new Talk("Java EE ohne Ballast", TalkType.WORKSHOP, createDateOf(2017, 11, 6, 9, 0), 480)
+new Talk("Eroeffnung", TalkType.KEYNOTE, createDateOf(2017, 11, 7, 9, 0), 45)
+new Talk("DDD mit Java EE", TalkType.SESSION, createDateOf(2017, 11, 7, 15, 0), 75)
