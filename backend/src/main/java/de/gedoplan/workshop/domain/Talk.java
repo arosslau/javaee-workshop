@@ -3,11 +3,15 @@ package de.gedoplan.workshop.domain;
 import de.gedoplan.baselibs.persistence.entity.GeneratedIntegerIdEntity;
 
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
+import javax.persistence.ManyToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -35,11 +39,16 @@ public class Talk extends GeneratedIntegerIdEntity {
 
   private int minutes;
 
+  @ManyToMany(fetch = FetchType.EAGER)
+  Set<Person> speakers;
+
   public Talk(String title, TalkType type, Date start, int minutes) {
     this.title = title;
     this.type = type;
     this.start = start;
     this.minutes = minutes;
+
+    this.speakers = new HashSet<>();
   }
 
   protected Talk() {
