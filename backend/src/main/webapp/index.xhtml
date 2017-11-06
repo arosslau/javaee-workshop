@@ -1,4 +1,4 @@
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html" xmlns:f="http://xmlns.jcp.org/jsf/core">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html" xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:p="http://primefaces.org/ui">
 
   <h:head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
@@ -6,6 +6,20 @@
   </h:head>
   <h:body>
     <h2>Java EE - Workshop</h2>
+    
+    <h:outputText value="#{talkPresenter.hello}" />
+    
+    
+    <h:dataTable value="#{talkPresenter.talks}" var="talk">
+      <h:column>
+        <f:facet name="header">Id</f:facet>
+        <h:outputText value="#{talk.id}" />
+      </h:column>
+      <h:column>
+        <f:facet name="header">Title</f:facet>
+        <h:outputText value="#{talk.title}" />
+      </h:column>
+    </h:dataTable>
 
   </h:body>
 </html>
