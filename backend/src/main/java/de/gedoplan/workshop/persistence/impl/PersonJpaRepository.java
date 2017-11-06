@@ -6,15 +6,15 @@ import de.gedoplan.workshop.persistence.PersonRepository;
 import java.util.List;
 
 import javax.enterprise.context.ApplicationScoped;
+import javax.inject.Inject;
 import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
 
 @ApplicationScoped
 @Transactional(rollbackOn = Exception.class)
 public class PersonJpaRepository implements PersonRepository {
 
-  @PersistenceContext(unitName = "default")
+  @Inject
   EntityManager entityManager;
 
   @Override

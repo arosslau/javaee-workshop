@@ -6,15 +6,15 @@ import de.gedoplan.workshop.persistence.TalkRepository;
 import java.util.List;
 
 import javax.enterprise.context.ApplicationScoped;
+import javax.inject.Inject;
 import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
 
 @ApplicationScoped
 @Transactional(rollbackOn = Exception.class)
-public class TalkJpaRepository implements TalkRepository {
+public class TalkJpaRepository /* extends SingleIdEntityRepository<Integer, Talk> */ implements TalkRepository {
 
-  @PersistenceContext(unitName = "default")
+  @Inject
   EntityManager entityManager;
 
   @Override
