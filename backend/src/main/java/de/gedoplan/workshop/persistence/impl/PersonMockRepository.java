@@ -9,10 +9,12 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import javax.enterprise.context.ApplicationScoped;
+import javax.enterprise.inject.Alternative;
 import javax.enterprise.inject.Produces;
 import javax.persistence.PersistenceException;
 
 @ApplicationScoped
+@Alternative
 public class PersonMockRepository implements PersonRepository {
 
   private ConcurrentHashMap<Integer, Person> store = new ConcurrentHashMap<>();
@@ -44,8 +46,8 @@ public class PersonMockRepository implements PersonRepository {
   }
 
   @Override
-  public void remove(Person person) {
-    this.store.remove(person.getId());
+  public boolean remove(Person person) {
+    return this.store.remove(person.getId()) != null;
 
   }
 

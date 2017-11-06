@@ -1,12 +1,16 @@
 package de.gedoplan.workshop.domain;
 
+import de.gedoplan.baselibs.persistence.entity.GeneratedIntegerIdEntity;
+
+import javax.persistence.Entity;
+
 import lombok.Getter;
 import lombok.Setter;
 
+@Entity
 @Getter
 @Setter
-public class Person {
-  private Integer id;
+public class Person extends GeneratedIntegerIdEntity {
 
   private String lastName;
 

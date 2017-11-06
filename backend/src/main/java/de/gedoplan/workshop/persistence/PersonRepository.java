@@ -9,7 +9,7 @@ public interface PersonRepository {
 
   Person merge(Person person);
 
-  void remove(Person person);
+  boolean remove(Person person);
 
   List<Person> findAll();
 
