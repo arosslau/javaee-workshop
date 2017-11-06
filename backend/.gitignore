@@ -5,3 +5,5 @@
 /.factorypath
 /.tern-project
 /nb-configuration.xml
+/.idea
+**/.idea

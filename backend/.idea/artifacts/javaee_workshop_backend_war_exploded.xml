@@ -1,0 +1,26 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="javaee-workshop-backend:war exploded">
+    <output-path>$PROJECT_DIR$/target/javaee-workshop-backend-8.0.0-SNAPSHOT</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="javaee-workshop-backend" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: commons-logging:commons-logging:1.1.2" />
+          <element id="library" level="project" name="Maven: de.gedoplan:baselibs-utils:1.1" />
+          <element id="library" level="project" name="Maven: commons-codec:commons-codec:1.5" />
+          <element id="library" level="project" name="Maven: de.gedoplan:baselibs-naming:1.1" />
+          <element id="library" level="project" name="Maven: de.gedoplan:baselibs-persistence:1.2" />
+          <element id="library" level="project" name="Maven: com.eaio:uuid:3.2" />
+          <element id="library" level="project" name="Maven: org.projectlombok:lombok:1.16.12" />
+          <element id="library" level="project" name="Maven: org.primefaces:primefaces:5.1" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/target/javaee-workshop-backend-8.0.0-SNAPSHOT/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="javaee-workshop-backend/web/Web" />
+    </root>
+  </artifact>
+</component>
