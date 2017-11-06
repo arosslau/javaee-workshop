@@ -13,8 +13,10 @@ import java.util.List;
 import java.util.Map;
 
 import javax.enterprise.context.ApplicationScoped;
+import javax.enterprise.inject.Alternative;
 
 @ApplicationScoped
+@Alternative
 public class TalkMockRepository implements TalkRepository {
 
   private Map<Integer, Talk> store = new HashMap<>();
