@@ -16,7 +16,7 @@ public class TalkResource {
 
   @Path("{id}")
   @GET
-  @Produces(MediaType.APPLICATION_JSON)
+  @Produces({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
   public Talk getTalk(@PathParam("id") Integer id) {
     Talk talk = new Talk("xxx", TalkType.KEYNOTE, new Date(), 45);
     talk.setId(id);
