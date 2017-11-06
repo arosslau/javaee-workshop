@@ -7,17 +7,19 @@ import java.util.Date;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 @Path("talk")
 public class TalkResource {
 
+  @Path("{id}")
   @GET
   @Produces(MediaType.APPLICATION_JSON)
-  public Talk getTalk() {
+  public Talk getTalk(@PathParam("id") Integer id) {
     Talk talk = new Talk("xxx", TalkType.KEYNOTE, new Date(), 45);
-    talk.setId(42);
+    talk.setId(id);
 
     return talk;
   }
