@@ -16,4 +16,7 @@ public class Person {
     this.lastName = lastName;
     this.firstName = firstName;
   }
+
+  protected Person() {
+  }
 }
