@@ -56,7 +56,7 @@ public class TalkResource {
   public void putTalk(@PathParam(ID_PARM) Integer id, Talk talk) {
     if (talk.getId() == null) {
       talk.setId(id);
-    } else if (talk.getId() != id) {
+    } else if (!talk.getId().equals(id)) {
       throw new BadRequestException();
     }
 
